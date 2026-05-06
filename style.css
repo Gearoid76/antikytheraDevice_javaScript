@@ -1,0 +1,17 @@
+body {
+  background: #080808;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+canvas {
+  background: radial-gradient(circle, #060606 40%, #000 100%);
+  max-width: min(94vw, 560px);
+  max-height: min(94vh, 560px);
+  width: auto;
+  height: auto;
+}

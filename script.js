@@ -227,7 +227,14 @@ function drawMoonPhase(x, y, phase) {
 }
 
 // --- LOOP ---
+window.activeFace = "front";
+
 function animate() {
+  if (window.activeFace === "eclipse") {
+    requestAnimationFrame(animate);
+    return;
+  }
+
   const { sunAngle, moonAngle, planetAngles } = getAstronomyAngles();
 
   drawDial(sunAngle, moonAngle, planetAngles);

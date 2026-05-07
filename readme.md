@@ -1,0 +1,1 @@
+This is a part replica of the Antikythera device all with vibe code. Using NPM libraries to get accurate readings for the planets.

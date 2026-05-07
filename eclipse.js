@@ -1,3 +1,4 @@
+
 function getSolarEclipses(count=20) {
     const eclipses = [];
 
@@ -64,9 +65,15 @@ function drawEclipseFace(eclipses) {
 
 
 const eclipses = getSolarEclipses(30);
+const eclipseTitle = document.getElementById("eclipseTitle");
+
+function updateEclipseTitle() {
+    eclipseTitle.classList.toggle("is-hidden", window.activeFace !== "eclipse");
+}
 
 document.getElementById("toggleFace").addEventListener("click", () => {
     window.activeFace = window.activeFace === "eclipse" ? "front" : "eclipse";
+    updateEclipseTitle();
 });
 
 function animateEclipses() {
@@ -77,3 +84,7 @@ function animateEclipses() {
     requestAnimationFrame(animateEclipses);
 }
 animateEclipses();
+
+const box = document.getElementById("box");
+const nexText = document.createTextNode("Hello test test ");
+box.appendChild(nexText);

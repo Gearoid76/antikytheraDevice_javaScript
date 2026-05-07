@@ -1,11 +1,25 @@
 body {
   background: #080808;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 16px;
   height: 100vh;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  color: #f3dfaa;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.is-hidden {
+  display: none;
 }
 
 canvas {
